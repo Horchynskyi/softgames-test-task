@@ -28,15 +28,23 @@ export class App extends Application<HTMLCanvasElement> {
 			resolution: 1,
 		});
 
+		//@ts-ignore
+		const stats = new Stats();
+
 		this.events = new utils.EventEmitter();
 		this.resizeManager = new ResizeManager(this);
 
 		const { view } = this;
 
+		document.body.appendChild(stats.dom);
 		document.body.appendChild(view);
 
 		this.load().then(() => {
 			this.create();
+		});
+
+		this.ticker.add(() => {
+			stats.update();
 		});
 	}
 
