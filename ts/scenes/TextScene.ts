@@ -29,7 +29,7 @@ export class TextScene extends ExampleScene {
 			charactersString: this.charactersString,
 			charactersTextures: this.charactersTextures,
 			fontSize: 50,
-			margin: 2,
+			margin: 5,
 		});
 
 		this.bitmapText = new BitmapText('joker \u{000000} \u{000001}', {
