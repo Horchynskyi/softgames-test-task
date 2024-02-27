@@ -1,3 +1,4 @@
-Minigame template.
+Softgames test task.
 
-npm run dev_server - runs localhost with "watch" status
+npm run dev - runs localhost with "watch" status
+npm run build - generates production build

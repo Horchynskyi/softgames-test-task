@@ -7,14 +7,7 @@ const commonConfig = {
 	entry: ['./ts/index.ts'],
 
 	module: {
-		rules: [
-			{ test: /\.([cm]?ts|tsx)$/, loader: 'ts-loader' },
-			// {
-			// 	test: /\.tsx?$/,
-			// 	use: 'ts-loader',
-			// 	include: [path.resolve(__dirname, 'js')],
-			// },
-		],
+		rules: [{ test: /\.([cm]?ts|tsx)$/, loader: 'ts-loader' }],
 	},
 
 	resolve: {
@@ -49,24 +42,9 @@ const devConfig = {
 				name: 'Chrome',
 			},
 		},
-		// historyApiFallback: {
-		// 	rewrites: [
-		// 		{ from: /.*\/dist\/app\.js/, to: './app.js' },
-		// 		{ from: /.*/, to: './static/devIndex.html' },
-		// 	],
-		// },
 	},
 
 	devtool: 'source-map',
-
-	plugins: [
-		// new webpack.ProvidePlugin({
-		// 	PIXI: 'pixi.js',
-		// }),
-		// new DefinePlugin({
-		// 	__ENVIRONMENT__: `"DEV"`,
-		// }),
-	],
 };
 
 const prodConfig = {
@@ -84,23 +62,7 @@ const prodConfig = {
 
 	optimization: {
 		minimize: true,
-		// minimizer: [new TerserPlugin({ extractComments: false })],
 	},
-
-	plugins: [
-		// new webpack.ProvidePlugin({
-		// 	PIXI: 'pixi.js',
-		// }),
-		// new CleanWebpackPlugin(),
-		// new DefinePlugin({
-		//     __ENVIRONMENT__: `"PROD"`,
-		// }),
-		// new PostCompile(() => {
-		//     replaceOutHtml("./dist");
-		//     fs.unlinkSync("./dist/app.js");
-		//     console.log('Build completed!');
-		// }),
-	],
 };
 
 module.exports = [devConfig, prodConfig];
