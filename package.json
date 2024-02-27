@@ -1,0 +1,22 @@
+{
+	"name": "mingame",
+	"version": "0.2.1",
+	"description": "mingame",
+	"main": "src/index.js",
+	"scripts": {
+		"build": "webpack --config-name production",
+		"dev": "webpack-dev-server --config-name development"
+	},
+	"dependencies": {
+		"@pixi/particle-emitter": "^5.0.8",
+		"@types/animejs": "^3.1.2",
+		"address": "^1.1.2",
+		"animejs": "^3.2.1",
+		"pixi.js": "^7.4.0",
+		"ts-loader": "^9.5.1",
+		"typescript": "^5.3.3",
+		"webpack": "^5.90.3",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^5.0.2"
+	}
+}
